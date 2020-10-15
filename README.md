@@ -10,3 +10,5 @@ Requirement :
 - USB Converter to TTL (Serial)
 - Jumper Cables
 - EM4100 Card / Tags (with 125 Khz frequencies)
+
+Attachment : https://github.com/Embedotronics/Sending-RFID-data-to-MySQL-server-using-python-with-arduino/blob/master/python_code.py
