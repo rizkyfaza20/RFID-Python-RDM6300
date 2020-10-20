@@ -1,7 +1,7 @@
 import rdm6300
 import MySQLdb
 
-# Establish connection to MYSQL Server 
+# Establish connection to MYSQL Server
 
 dbConn = MySQLdb.connect("localhost","root","","raspberry_testing") or die ("Could not connect to the databases")
 
@@ -18,10 +18,9 @@ while True:
 	try:
 		card = reader.read()
 		print (card)
-		pieces=card.split(" ")
 		try:
 			cursor=dbConn.cursor()
-			cursor.execute("""INSERT INTO `Test1` (ID,Member_ID,allowed_members) VALUES (NULL,%s,%s)""", (pieces[0],pieces[1]))
+			cursor.execute("""INSERT INTO `Test1` (ID) VALUES (NULL)""")
 			dbConn.commit()
 			dbConn.close()
 		except MySQLdb.IntegrityError:
